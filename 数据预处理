@@ -1,0 +1,13 @@
+import os
+datapath='D:\\datasets\\testData\\train'
+datapathClass='D:\\datasets\\testData2\\train'
+def dataPre():
+    global datapathClass
+    global datapath
+    dir=os.listdir(datapath)
+    for Class in dir:
+        dirClass=os.listdir(datapath+'\\'+Class)
+        for image in dirClass:
+            str='copy '+datapath+'\\'+Class+'\\'+image+' '+datapathClass
+            os.system(str)
+dataPre()
